@@ -3,7 +3,7 @@
  * swapped for Abu's real details before launch.
  */
 export const site = {
-  name: "Abu",
+  name: "Abdullah",
   wordmark: "Abdullah",
   role: "Developer",
   title: "Abu | Developer",
