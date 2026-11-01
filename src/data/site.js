@@ -6,9 +6,9 @@ export const site = {
   name: "Abdullah",
   wordmark: "Abdullah",
   role: "Developer",
-  title: "Abu | Developer",
+  title: "Abdullah | Developer",
   description:
-    "Abu is a developer who builds fast, accessible and carefully crafted web experiences, from first idea to production.",
+    "Abdullah is a developer who builds fast, accessible and carefully crafted web experiences, from first idea to production.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
 
   // REPLACE: shown in the hero chip and used on the contact section.
