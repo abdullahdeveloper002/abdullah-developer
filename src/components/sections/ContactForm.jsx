@@ -144,8 +144,8 @@ export default function ContactForm() {
   const banner = banners[state.status];
 
   return (
-    <form action={formAction} onSubmit={handleSubmit} noValidate className="space-y-6">
-      <div className="grid gap-6 sm:grid-cols-2">
+    <form action={formAction} onSubmit={handleSubmit} noValidate className="space-y-5">
+      <div className="grid gap-5 sm:grid-cols-2">
         <Field id="contact-name" label="Your name" error={errors.name}>
           <input type="text" autoComplete="name" maxLength={LIMITS.name} placeholder="Jane Doe" {...field("name")} />
         </Field>
@@ -194,7 +194,7 @@ export default function ContactForm() {
         </label>
       </div>
 
-      <div className="space-y-4">
+      <div className="space-y-3">
         <SubmitButton />
         <p className="flex items-center justify-center gap-2 text-sm text-paper/60">
           <Lock aria-hidden="true" className="size-4 shrink-0" />

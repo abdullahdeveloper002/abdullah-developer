@@ -9,19 +9,19 @@ import ContactForm from "./ContactForm";
 export default function Contact() {
   return (
     <Section id="contact" tone="forest">
-      <div className="grid items-start gap-12 lg:grid-cols-[1fr_1.05fr] lg:gap-16">
+      <div className="grid items-start gap-8 lg:grid-cols-[1fr_1.05fr] lg:gap-12">
         <div>
           <SectionHeading
             id="contact"
             index="05"
             eyebrow="Contact"
             tone="dark"
-            className="mb-8 md:mb-8"
+            className="mb-6 md:mb-6"
             title="Have an idea worth building? Let's talk."
             description="Whether it's a new product, a rebuild, or just a question, I'd love to hear about it. Send a message and I'll get back to you."
           />
 
-          <Reveal delay={0.1} className="space-y-8">
+          <Reveal delay={0.1} className="space-y-6">
             <a
               href={`mailto:${site.email}`}
               className="group flex items-center gap-4 rounded-card border border-paper/15 bg-night/40 p-4 sm:p-5 transition-colors duration-200 hover:border-lime"
@@ -51,7 +51,7 @@ export default function Contact() {
             <h3 className="font-display text-[clamp(1.625rem,2.6vw,2.25rem)] leading-tight font-semibold">
               Send a message
             </h3>
-            <p className="mt-2 mb-7 text-paper/60">All fields are required. I&rsquo;ll reply by email.</p>
+            <p className="mt-2 mb-6 text-paper/60">All fields are required. I&rsquo;ll reply by email.</p>
             <ContactForm />
           </div>
         </Reveal>

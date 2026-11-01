@@ -14,7 +14,7 @@ export default function Hero() {
     <section
       id="top"
       aria-labelledby="hero-title"
-      className="relative isolate flex min-h-[80svh] items-center pt-28 pb-10 md:pt-32 md:pb-12"
+      className="relative isolate flex min-h-[70svh] items-center pt-28 pb-8 md:pt-32 md:pb-10"
     >
       {/* Dot texture fades out at the bottom so the hero melts into the next section. */}
       <div
@@ -40,7 +40,7 @@ export default function Hero() {
         <Reveal immediate delay={0.08}>
           <h1
             id="hero-title"
-            className="mt-7 max-w-5xl text-[2.5rem] leading-[1.08] font-semibold sm:text-5xl xl:text-6xl"
+            className="mt-6 max-w-5xl text-[2.5rem] leading-[1.08] font-semibold sm:text-5xl xl:text-6xl"
           >
             Hi, I&rsquo;m {site.name}. I build web <br className="hidden lg:block" />
             experiences that feel{" "}
@@ -49,7 +49,7 @@ export default function Hero() {
         </Reveal>
 
         <Reveal immediate delay={0.16}>
-          <p className="mt-7 max-w-4xl text-lg text-ink-soft sm:text-xl">
+          <p className="mt-5 max-w-4xl text-lg text-ink-soft sm:text-xl">
             <span className="block">
               I&rsquo;m a developer who turns ideas into fast, accessible, carefully crafted software.
             </span>
@@ -63,7 +63,7 @@ export default function Hero() {
         <Reveal
           immediate
           delay={0.24}
-          className="mt-10 flex w-full flex-col justify-center gap-3 sm:w-auto sm:flex-row"
+          className="mt-8 flex w-full flex-col justify-center gap-3 sm:w-auto sm:flex-row"
         >
           <Button href="#projects" size="lg">
             View My Work
@@ -74,7 +74,7 @@ export default function Hero() {
         </Reveal>
 
         <Reveal immediate delay={0.32}>
-          <ul className="mt-14 flex flex-wrap justify-center gap-3 text-sm font-medium text-ink-soft">
+          <ul className="mt-10 flex flex-wrap justify-center gap-3 text-sm font-medium text-ink-soft">
             {strengths.map(({ icon: Icon, label }) => (
               <li
                 key={label}

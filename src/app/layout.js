@@ -11,6 +11,7 @@ const code = Geist_Mono({ variable: "--font-code", subsets: ["latin"], display: 
 
 export const metadata = {
   metadataBase: new URL(site.url),
+  alternates: { canonical: "/" },
   title: { default: site.title, template: `%s | ${site.name}` },
   description: site.description,
   openGraph: {
@@ -30,6 +31,18 @@ export const viewport = {
   ],
 };
 
+// Structured data so search engines can tell this is a person's portfolio. Placeholder social links are left out.
+const personJsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: site.name,
+  jobTitle: site.role,
+  description: site.description,
+  url: site.url,
+  email: `mailto:${site.email}`,
+  sameAs: site.socials.map((social) => social.href).filter((href) => !href.includes("your-username")),
+}).replace(/</g, "\\u003c");
+
 // Runs before first paint so the page never flashes the wrong theme. A saved
 // choice wins; otherwise the visitor's OS setting decides.
 const themeScript = `(function(){try{var s=localStorage.getItem("theme");var d=s?s==="dark":matchMedia("(prefers-color-scheme: dark)").matches;document.documentElement.dataset.theme=d?"dark":"light"}catch(e){}})()`;
@@ -39,6 +52,7 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning className={`${body.variable} ${heading.variable} ${code.variable}`}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: personJsonLd }} />
       </head>
       <body>
         {/* Without JS the entrance animations would leave content hidden. */}

@@ -53,18 +53,7 @@
   --radius-control: 0.75rem;
 
   /* Ambient motion: slow and small, so it adds life without pulling attention. */
-  --animate-float: float 6s ease-in-out infinite;
   --animate-drift: drift 16s ease-in-out infinite;
-
-  @keyframes float {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-8px);
-    }
-  }
 
   @keyframes drift {
     0%,
@@ -233,22 +222,22 @@
  *   card-surface : the standard light card (radius, hairline border, white fill)
  */
 @utility section-y {
-  padding-block: 2.5rem;
+  padding-block: 2rem;
 
   @media (min-width: 48rem) {
-    padding-block: 3.5rem;
+    padding-block: 3rem;
   }
 
   @media (min-width: 64rem) {
-    padding-block: 4.5rem;
+    padding-block: 3.5rem;
   }
 }
 
 @utility card-pad {
-  padding: 1.5rem;
+  padding: 1.25rem;
 
   @media (min-width: 40rem) {
-    padding: 2rem;
+    padding: 1.75rem;
   }
 }
 

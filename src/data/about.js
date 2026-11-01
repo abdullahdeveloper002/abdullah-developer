@@ -5,6 +5,13 @@ export const aboutParagraphs = [
   "I care about the parts of a product people feel (speed, clarity and polish) and the parts they never see: readable code, sensible structure, and decisions the next developer can follow without a guided tour.",
 ];
 
+// The three-step working rhythm shown as a stepper inside the story card.
+export const processSteps = [
+  { title: "Understand", text: "Goals, users and constraints first." },
+  { title: "Build", text: "The smallest thing that solves it well." },
+  { title: "Refine", text: "Polish it with real feedback." },
+];
+
 export const principles = [
   {
     icon: Compass,

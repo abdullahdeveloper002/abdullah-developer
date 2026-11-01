@@ -71,14 +71,14 @@ export default function SkillTabs() {
         id={`${baseId}-panel`}
         aria-labelledby={`${baseId}-tab-${activeId}`}
         tabIndex={0}
-        className="mt-8 rounded-card"
+        className="mt-6 rounded-card"
       >
-        <p className="mb-5 text-ink-soft">{active.blurb}</p>
+        <p className="mb-4 text-ink-soft">{active.blurb}</p>
         <ul className="flex flex-wrap justify-center gap-4">
           {active.items.map(({ name, logo }) => (
             <li
               key={name}
-              className="flex min-h-40 w-[calc(50%-0.5rem)] flex-col items-center justify-center gap-4 rounded-card border border-line bg-surface p-4 text-center sm:min-h-48 sm:w-[calc(33.333%-0.667rem)] lg:w-[calc(16.666%-0.834rem)]"
+              className="flex min-h-36 w-[calc(50%-0.5rem)] flex-col items-center justify-center gap-4 rounded-card border border-line bg-surface p-4 text-center sm:min-h-40 sm:w-[calc(33.333%-0.667rem)] lg:w-[calc(16.666%-0.834rem)]"
             >
               <BrandLogo name={logo} className="size-12 shrink-0" />
               <span className="font-medium">{name}</span>

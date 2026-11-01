@@ -2,7 +2,7 @@
  * Featured projects, shown in this order.
  *
  * NOTE: these three entries and their images in /public/projects are SAMPLE
- * projects (the images are dummy stock photos, not real products). Replace
+ * projects (the images are designed mock-ups, not real products). Replace
  * each one with real work before launch:
  *  - overwrite the image in /public/projects (or point `image.src` at a new file)
  *    and update `image.alt` to describe the screenshot
@@ -10,8 +10,8 @@
  *    for links that exist
  *  - rewrite the title, summary, problem and features in your own words
  *
- * Images fill the whole preview area edge to edge and are cropped around the
- * centre, so use roughly 1600 x 1000 (16:10) and keep the key content central.
+ * Images fill the whole preview area edge to edge and are cropped from the
+ * top, so keep the key content (and any browser frame) near the top.
  */
 export const projects = [
   {
@@ -30,8 +30,8 @@ export const projects = [
     liveUrl: null,
     repoUrl: null,
     image: {
-      src: "/projects/dashboard-photo.webp",
-      alt: "Placeholder photo for the Analytics Dashboard project.",
+      src: "/projects/dashboard.webp",
+      alt: "Mock-up of the Analytics Dashboard: key metrics, a revenue chart, top channels and a customer table.",
     },
   },
   {
@@ -50,8 +50,8 @@ export const projects = [
     liveUrl: null,
     repoUrl: null,
     image: {
-      src: "/projects/landing-photo.webp",
-      alt: "Placeholder photo for the Business Landing Page project.",
+      src: "/projects/landing.webp",
+      alt: "Mock-up of the Business Landing Page: a clear headline, a call to action and supporting sections.",
     },
   },
   {
@@ -70,8 +70,8 @@ export const projects = [
     liveUrl: null,
     repoUrl: null,
     image: {
-      src: "/projects/tasks-photo.webp",
-      alt: "Placeholder photo for the Task Board project.",
+      src: "/projects/tasks.webp",
+      alt: "Mock-up of the Task Board: to do, doing and done columns with a weekly progress bar.",
     },
   },
 ];

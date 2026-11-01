@@ -6,10 +6,10 @@ export default function SectionHeading({ id, index, eyebrow, title, description,
   const dark = tone === "dark";
 
   return (
-    <Reveal className={cn("mb-8 max-w-2xl md:mb-10", className)}>
+    <Reveal className={cn("mb-6 max-w-2xl md:mb-8", className)}>
       <p
         className={cn(
-          "mb-4 flex items-center gap-3 font-mono text-sm",
+          "mb-3 flex items-center gap-3 font-mono text-sm",
           dark ? "text-lime" : "text-lime-deep",
         )}
       >
@@ -27,7 +27,7 @@ export default function SectionHeading({ id, index, eyebrow, title, description,
         {title}
       </h2>
       {description ? (
-        <p className={cn("mt-4 text-base sm:mt-5 sm:text-lg", dark ? "text-fog" : "text-ink-soft")}>{description}</p>
+        <p className={cn("mt-3 text-base sm:mt-4 sm:text-lg", dark ? "text-fog" : "text-ink-soft")}>{description}</p>
       ) : null}
     </Reveal>
   );

@@ -11,6 +11,8 @@ import SiteLogo from "@/components/ui/Logo";
 import ThemeToggle from "@/components/ui/ThemeToggle";
 
 const sectionIds = navLinks.map((link) => link.href.slice(1));
+// The hero is observed too (it has no nav link): when it is the active section, no link is highlighted.
+const observedIds = ["top", ...sectionIds];
 
 // Prefixing "/" keeps the anchors working from other routes (e.g. the 404 page).
 const toHome = (hash) => `/${hash}`;
@@ -26,7 +28,7 @@ function HomeLink() {
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const active = useActiveSection(sectionIds);
+  const active = useActiveSection(observedIds);
   const { scrollYProgress } = useScroll();
   const progress = useSpring(scrollYProgress, { stiffness: 180, damping: 30, mass: 0.4 });
 

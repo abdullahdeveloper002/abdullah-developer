@@ -33,10 +33,10 @@ export default function ProjectCard({ project }) {
         <h3 className="text-2xl font-semibold">{title}</h3>
         <p className="mt-3 text-ink-soft">{summary}</p>
 
-        <p className="mt-6 font-mono text-xs tracking-wide text-lime-deep uppercase">The problem</p>
+        <p className="mt-5 font-mono text-xs tracking-wide text-lime-deep uppercase">The problem</p>
         <p className="mt-1.5 text-ink">{problem}</p>
 
-        <ul className="mt-5 space-y-2">
+        <ul className="mt-4 space-y-1.5">
           {features.map((feature) => (
             <li key={feature} className="text-sm text-ink-soft">
               {feature}
@@ -44,7 +44,7 @@ export default function ProjectCard({ project }) {
           ))}
         </ul>
 
-        <ul className="mt-6 flex flex-wrap gap-2" aria-label="Technologies used">
+        <ul className="mt-5 flex flex-wrap gap-2" aria-label="Technologies used">
           {stack.map((tech) => (
             <li key={tech}>
               <Tag>{tech}</Tag>
@@ -53,7 +53,7 @@ export default function ProjectCard({ project }) {
         </ul>
 
         {hasLinks ? (
-          <div className="mt-auto flex flex-wrap items-center gap-3 pt-8">
+          <div className="mt-auto flex flex-wrap items-center gap-3 pt-6">
             {liveUrl ? (
               <Button href={liveUrl} variant="solid" icon={ArrowUpRight}>
                 Live demo<span className="sr-only"> of {title}</span>
